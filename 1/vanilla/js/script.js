@@ -9,12 +9,19 @@ listaBici = [
   {'nome': 'Bianchi', 'peso': 6}
 ]
 
-var min = listaBici[0];
+var biciPiuLeggera = listaBici[0];
 
 for(x = 1; x < listaBici.length; x++) {
-  if (listaBici[x].peso < min.peso) {
-    min = listaBici[x];
+  if (listaBici[x].peso < biciPiuLeggera.peso) {
+    biciPiuLeggera = listaBici[x];
   }
 }
 
-console.log(min);
+console.log(biciPiuLeggera);
+
+document.getElementById('container').innerHTML =
+  '<ul><li>Nome:' +
+  biciPiuLeggera.nome +
+  ' </li> <li> Peso:' +
+  biciPiuLeggera.peso +
+  '</li></ul>';
