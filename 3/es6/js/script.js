@@ -3,7 +3,7 @@
 // La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri
 // --- versione ES6
 
-myFunction = (array, min, max) => {
+const myFunction = (array, min, max) => {
   const newArray = array.filter((element, index) => {
     return index >= min && index <= max;
   });
